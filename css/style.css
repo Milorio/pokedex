@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+html {
+    /* a cada 1rem será considera 10px */
+    font-size: 62.5%;
+}
+
+html,
+body {
+    height: 100vh;
+    font-family: "Source Sans Pro";
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+header {
+    background-color: #f80000;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+}
+
+header img {
+    width: 150px;
+    margin-left: 20px;
+    padding: 15px 0;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding: 2.4rem;
+    transition: all 250ms linear 0s;
+}
+
+header nav ul li a:hover {
+    background: rgb(83, 3, 3);
+}
+
+h2 {
+    color: rgb(75, 75, 75);
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+}
+
+h3 {
+    color: rgb(75, 75, 75);
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+}
+
+
+/*=============== 
+HERO
+==================*/
+
+section.hero {
+    margin: 80px 0;
+}
+
+section.hero .container {
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+    display: flex;
+}
+
+section.hero p {
+    color: rgb(0, 0, 0);
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    margin: 10px 0px 0px;
+}
+
+
+/*=============== 
+MAIN
+==================*/
+
+main {
+    margin-bottom: 80px;
+}
+
+
+/* busca */
+
+ul li:hover {
+    transform: translateY(-7px);
+    opacity: 0.6;
+    border-radius: 10px 20px 30px;
+}
+
+.lista li {
+    max-height: 80%;
+    background-color: #8f8686;
+    margin: 10px;
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.pesquisa {
+    background-color: rgb(230, 223, 223);
+    width: 55%;
+    padding: 10px;
+    margin: 10px 205px;
+    color: black;
+    border-radius: 10px;
+}
+
+.h-100-p {
+    height: 100%;
+}
+
+pre {
+    font-family: monospace;
+    margin: 10px;
+}
+
+pre>span {
+    color: orangered;
+    font-family: monospace;
+}
+
+.numb {
+    color: #000;
+    opacity: 0.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.vej {
+    background-color: #332e2e;
+    color: #ffffff;
+    width: auto;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+a {
+    color: #fff;
+    padding: 60px;
+}
+
+
+/* flip cards*/
+
+.flip-container {
+    perspective: 1000;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 320px;
+    height: 350px;
+    cursor: pointer;
+}
+
+ul li .flip-container,
+.front,
+.back {
+    margin-top: 0px;
+    width: 220px;
+    height: 320px;
+    cursor: pointer;
+}
+
+.flipper {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+    padding: 0px;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0px;
+}
+
+.front {
+    z-index: 2;
+    padding: 0px;
+}
+
+.back {
+    transform: rotateY(180deg);
+    padding: 0px;
+}
